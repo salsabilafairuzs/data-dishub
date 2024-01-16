@@ -14,26 +14,41 @@
                       <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Tahun</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="basic-default-name" name="tahun"/>
+                          <input type="number" class="form-control" id="basic-default-name" name="tahun"/>
                         </div>
                       </div>
                       <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-default-name">Bulan</label>
+                        <label class="col-sm-2 col-form-label" for="month-input">Bulan</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="basic-default-name" name="bulan"/>
+                          {{-- <input type="month" class="form-control" id="month-input" name="bulan" /> --}}
+                          <select class="form-select" id="month-input" aria-label="Pilih Bulan" name="bulan">
+                            <option selected>Pilih Bulan</option>
+                            <option value="Januari">Januari</option>
+                            <option value="Februari">Februari</option>
+                            <option value="Maret">Maret</option>
+                            <option value="April">April</option>
+                            <option value="Mei">Mei</option>
+                            <option value="Juni">Juni</option>
+                            <option value="Juli">Juli</option>
+                            <option value="Agustus">Agustus</option>
+                            <option value="September">Septembber</option>
+                            <option value="Oktober">Oktober</option>
+                            <option value="November">November</option>
+                            <option value="Desember">Desember</option>
+                          </select>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-name">Jumlah Kejadian</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="basic-default-name" name="jml_kejadian"/>
+                          <input type="number" class="form-control" id="basic-default-name" name="jml_kejadian"/>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-default-company">Jumlah Korban Meninggal</label>
                         <div class="col-sm-10">
                           <input
-                            type="text"
+                            type="number"
                             class="form-control"
                             id="basic-default-company"
                             name="jml_korban_meninggal"
@@ -45,7 +60,7 @@
                         <div class="col-sm-10">
                           <div class="input-group input-group-merge">
                             <input
-                              type="text"
+                              type="number"
                               id="basic-default-email"
                               class="form-control"
                               name="jml_korban_luka_berat"
@@ -57,7 +72,7 @@
                         <label class="col-sm-2 col-form-label" for="basic-default-phone">Jumlah Korban Luka Ringan</label>
                         <div class="col-sm-10">
                           <input
-                            type="text"
+                            type="number"
                             id="basic-default-phone"
                             class="form-control phone-mask"
                             name="jml_korban_luka_ringan"
@@ -86,19 +101,6 @@
               </div>
             </div>
           </div>
-
-                    <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
-                </div>
-                </div>
-                <div class="col-sm-5 text-center text-sm-left">
-                <div class="card-body pb-0 px-0 px-md-4">
-                    <img
-                    src="../assets/img/illustrations/man-with-laptop-light.png"
-                    height="140"
-                    alt="View Badge User"
-                    data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                    data-app-light-img="illustrations/man-with-laptop-light.png"
-                    />
                 </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KendaraanController;
 use App\Http\Controllers\RuasJalanController;
@@ -17,18 +18,19 @@ use App\Http\Controllers\LokasiFlashingController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+Route::get('dashboard', [DashboardController::class, 'index']);
 Route::resource('kendaraan',KendaraanController::class);
 Route::get('kendaraan-hapus/{id}', [KendaraanController::class, 'destroy']);
 Route::resource('kecelakaan',KecelakaanController::class);
 Route::get('kecelakaan-hapus/{id}', [KecelakaanController::class, 'destroy']);
 Route::resource('flashing',LokasiFlashingController::class);
 Route::get('flashing-hapus/{id}', [LokasiFlashingController::class, 'destroy']);
-Route::resource('ruas',RuasJalanController::class);
-Route::get('ruas-hapus/{id}', [RuasJalanController::class, 'destroy']);
+Route::resource('ruas-jalan',RuasJalanController::class);
+Route::get('ruas-jalan-hapus/{id}', [RuasJalanController::class, 'destroy']);
 
 // Route::get('/tambah-kecelakaan', function () {
 //     return view('master.kecelakaan.tambah-kecelakaan');

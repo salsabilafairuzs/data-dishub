@@ -12,7 +12,7 @@ class RuasJalanController extends Controller
      */
     public function index()
     {
-        $data['ruas'] = RuasJalan::get();
+        $data['ruas-jalan'] = RuasJalan::get();
 
         return view('master.ruas-jalan.kondisi-ruas-jalan', $data);
     }
@@ -41,7 +41,7 @@ class RuasJalanController extends Controller
         $ruas->kelas_jalan= $request['kelas'];
         $ruas->save();
 
-        return redirect('/ruas');
+        return redirect('/ruas-jalan');
     }
 
     /**
@@ -78,7 +78,7 @@ class RuasJalanController extends Controller
         $ruas->kelas_jalan= $request['kelas'];
         $ruas->update();
 
-        return redirect('/ruas');
+        return redirect('/ruas-jalan');
     }
 
     /**
@@ -89,6 +89,6 @@ class RuasJalanController extends Controller
         $ruas = RuasJalan::where('id', $id)->first();
         $ruas->delete();
 
-        return redirect('/ruas');
+        return redirect('/ruas-jalan');
     }
 }
